@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Animated, StyleSheet, Text, TouchableWithoutFeedback } from 'react-native';
 
+const hotpink = 'rgb(255, 105, 180)';
+const rebeccapurple = 'rgb(102, 51, 153)';
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: "hotpink",
+    backgroundColor: hotpink,
     borderRadius: 6,
     paddingHorizontal: 16,
     paddingVertical: 6,
@@ -91,6 +93,10 @@ export default class Button extends Component {
           style={[
             styles.button, 
             {
+              backgroundColor: this.state.shadow.interpolate({
+                inputRange: [0, 1],
+                outputRange: [hotpink, rebeccapurple]
+              }),
               shadowOffset: {
                 height: this.state.shadow.interpolate({
                   inputRange: [0, 1],
