@@ -1,3 +1,17 @@
+# ShadowOffsetAnimation
+
+_Example project for bug in [react-native-web](https://github.com/necolas/react-native-web)_
+
+## Shadow Offset Bug
+
+react-native-web doesn't handle animation to [`shadowOffset`'s `width` or `height`](https://facebook.github.io/react-native/docs/shadow-props.html) values:
+
+![react-native handling shadowOffset animation](img/iphone-simulator.gif)
+
+![react-native-web erroring with shadowOffset animation](img/storybook-firefox-56.gif)
+
+See [`Button.js`](Button.js) for the example code.
+
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
